@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "谷歌翻译助手",
+  "version": "1.0",
+  "description": "选中文字后右键翻译",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://translate.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+} 
